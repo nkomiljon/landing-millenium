@@ -1,0 +1,121 @@
+
+<header class="header" appHeaderSticky>
+  <div class="header__inner">
+    <nav class="header-nav">
+      <div class="container">
+        <div class="header-nav__inner header-row">
+
+          <div class="header-nav__item header-nav__logo">
+            <a class="logo" href="#">
+              <img src="./assets/images/logo.svg" alt="logo">
+            </a>
+          </div>
+
+          <div class="header-nav__item header-nav__list">
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__link" href="">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Цены</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Кейсы и отзывы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="header-nav__item header-nav__feedback">
+
+            <div class="contact">
+              <div class="contact__inner">
+                <div class="social">
+                  <a class="social__link" href="#">
+                    <img src="./assets/images/icons/telegram.svg" alt="">
+                  </a>
+                  <a class="social__link" href="#">
+                    <img src="./assets/images/icons/whatsapp.svg" alt="">
+                  </a>
+                </div>
+                <a class="contact__phone" href="tel:+7495556565">
+                  + 7 (495) 555 65 65
+                </a>
+              </div>
+              <span class="contact__time">Ежедневно с 09:00 до 18:00</span>
+            </div>
+          </div>
+
+          <div class="header-nav__item header-nav__btn">
+            <button class="btn btn-theme btn-call">
+              <span class="btn-typography">Заказать звонок</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-mobile">
+      <div class="container">
+        <div class="header-row">
+          <div class="header-mobile__btn">
+            <button class="mobile-btn" (click)="isOpen()">
+              <div class="mobile-btn__inner">
+                <span class="mobile-btn__logo first-span"></span>
+                <span class="mobile-btn__logo second-span"></span>
+                <span class="mobile-btn__logo last-span" [class.span-active]="isActive"></span>
+              </div>
+            </button>
+          </div>
+          <div >
+            <a class="header-mobile__logo" href="#">
+              <img src="./assets/images/logo.svg" alt="">
+            </a>
+          </div>
+
+          <div>
+            <a class="btn btn-theme btn-call" href="">
+              <img src="./assets/images/icons/phone-call.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" [class.d-block]="isActive">
+    <div class="mobile-menu__wrapper">
+      <div class="mobile-menu__top">
+        <button class="mobile-menu__btn" (click)="isClose(false)">
+          <img src="./assets/images/icons/colse-icon.svg" alt="">
+        </button>
+      </div>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__list-item">
+          <a class="mobile-menu__list-link" href="#">Главная</a>
+        </li>
+        <li class="mobile-menu__list-item">
+          <a class="mobile-menu__list-link" href="#">Цены</a>
+        </li>
+        <li class="mobile-menu__list-item">
+          <a class="mobile-menu__list-link" href="#">Кейсы и отзывы</a>
+        </li>
+        <li class="mobile-menu__list-item">
+          <a class="mobile-menu__list-link" href="#">Контакты</a>
+        </li>
+      </ul>
+      <div class="mobile-menu__email">
+        <a class="mobile-menu__email-link" href="#">info@millenium.ru</a>
+      </div>
+      <div class="mobile-menu__work-time">
+                    <span>
+                        +7 (495) 792-66-69 <br>
+                        пн-пт 10:00–19:00
+                    </span>
+      </div>
+    </div>
+  </div>
+
+
+</header>

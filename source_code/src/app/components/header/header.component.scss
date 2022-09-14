@@ -1,0 +1,453 @@
+
+.header {
+  background-color: #fff;
+  transition: all 0.4s ease;
+  &__inner {
+    padding: 32px 0 23px 0;
+    position: relative;
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-nav {
+    display: none;
+
+    //  &__inner {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //  }
+
+    &__item {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    &__logo,
+    &__list,
+    &__feedback,
+    &__btn {
+      display: flex;
+    }
+
+
+    &__list {
+      min-width: 382px;
+      padding: 23px 0 20px 0;
+      justify-content: space-between;
+    }
+  }
+
+  &-mobile {
+    display: block;
+
+    &__inner {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__btn {
+      width: auto;
+      height: auto;
+      display: flex;
+    }
+  }
+}
+
+.mobile-btn {
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 4px;
+    background: #6B5AF9;
+    border-radius: 1px;
+  }
+}
+
+.first-span {
+  width: 41px;
+  height: 4px;
+}
+
+.second-span {
+  width: 27px;
+  height: 4px;
+}
+
+.last-span {
+  width: 15px;
+  height: 4px;
+}
+
+.span-active {
+  width: 41px;
+  height: 4px;
+  display: block;
+  margin-bottom: 4px;
+  background-color: #43CD93;
+  border-radius: 1px;
+}
+
+
+.mobile-menu {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: none;
+  background-color: #fff;
+  border-top: 1px solid #f1f1f1;
+  position: absolute;
+  top: 95px;
+  left: 0;
+  z-index: 100;
+
+  &__wrapper {
+    padding: 25px 44px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    margin-bottom: 90px;
+  }
+
+  &__btn {
+    width: auto;
+    height: auto;
+    display: flex;
+    background-color: transparent;
+    padding: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+
+    &-item {
+      margin-bottom: 27px;
+    }
+
+    &-link {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: #2A2367;
+    }
+  }
+
+  &__email,
+  &__work-time {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 32px auto;
+  }
+
+  &__email-link,
+  &__work-time > span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: end;
+    color: #6B5AF9;
+  }
+
+
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__link {
+    font-family: var(--font-family-montserrat);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2A2367;
+  }
+}
+
+.social {
+
+  &__link {
+    margin-right: 15px;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__phone {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #2A2367;
+  }
+
+  &__time {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2A2367;
+  }
+}
+
+.sticky {
+  box-shadow: 0px 0px 30px rgb(0 0 0 / 15%);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  .header {
+    &-nav {
+      display: block;
+    }
+
+    &-mobile {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+
+  .header {
+
+    &__inner {
+      padding: 22px 0 15px 0;
+    }
+  }
+
+
+  .main {
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__inner {
+      padding-top: 41px;
+    }
+
+    &-description {
+
+      max-width: 45%;
+
+      &__info {
+        margin: 0 0 54px 0;
+
+        &-text {
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          color: #2A2367;
+        }
+      }
+
+      &__btn {
+        margin-bottom: 10px;
+      }
+
+      &__feedback {
+
+        &-text {
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          color: #6B5AF9;
+
+          & > b {
+            color: #2A2367;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+
+  .header {
+
+    &__inner {
+      padding: 14px 0 13px 0;
+    }
+
+    &-mobile__logo > img {
+      width: 91px;
+      height: 32px;
+    }
+  }
+
+
+  .main {
+
+    &__inner {
+      padding-top: 21px;
+      padding-bottom: 25px;
+    }
+
+    &-description {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 274px;
+
+      &__info {
+        margin: 30px 0 50px 0;
+
+        &-text {
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          color: #2A2367;
+        }
+      }
+
+      &__btn {
+        margin: 0 auto 9px auto;
+      }
+
+      &__feedback {
+        padding: 0 10px;
+        &-text {
+          text-align: center;
+        }
+      }
+    }
+
+    &-btn {
+
+      &__link {
+
+        & > img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    top: 70px;
+    &__wrapper {
+      padding: 24px 14px;
+    }
+
+    &__top {
+      margin-bottom: 48px;
+    }
+  }
+
+
+  .background {
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    background-size: contain;
+    background-position: top;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    &-nav {
+      display: block;
+    }
+
+    &-mobile {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+
+  .header {
+
+    &__inner {
+      padding: 22px 0 15px 0;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+
+  .header {
+
+    &__inner {
+      padding: 14px 0 13px 0;
+    }
+
+    &-mobile__logo > img {
+      width: 91px;
+      height: 32px;
+    }
+  }
+
+
+  .mobile-menu {
+    top: 70px;
+    &__wrapper {
+      padding: 24px 14px;
+    }
+
+    &__top {
+      margin-bottom: 48px;
+    }
+  }
+
+
+}

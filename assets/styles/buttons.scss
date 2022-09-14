@@ -1,0 +1,87 @@
+
+.btn {
+  width: auto;
+  cursor: pointer;
+}
+
+
+.btn-theme {
+  // display: flex;
+  background: #6B5AF9;
+  border-radius: 5px;
+}
+
+.btn-call {
+
+  padding: 22px 33px;
+}
+
+.btn-info-price {
+  padding: 22px 78px;
+}
+
+.btn-typography {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+
+.btn-feedback {
+  padding: 21px 103px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+
+  &--active {
+    background-color: #6B5AF9;
+  }
+}
+
+.btn-feedback-text {
+  color: #6B5AF9!important;
+}
+
+
+
+
+@media (min-width: 425px) and (max-width: 1024px) {
+  .btn-call {
+    display: flex;
+    padding: 9px 21px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .btn-call {
+    display: flex;
+    padding: 8px 18px;
+
+    & > img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+
+  .btn-feedback {
+    padding: 21px 64px;
+  }
+
+  .btn-feedback-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6B5AF9;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .btn-feedback {
+    padding: 21px 58px;
+  }
+}
